@@ -14,10 +14,12 @@ npm install termview
     // Now that termview is imported, you can use "Image, Video, and Gif" functions
     ```
 * ### Image
+    ![Image](https://user-images.githubusercontent.com/38299977/165391608-737c7c90-1f49-4fee-8334-a91f71187c6c.png)
     The `Image` function can be passed up to four parameters.
     - The path/url to the image to render
     - The optional width to render
     - The optional height to render
+
     ```js
     var render = await termview.Image('./myimage.png')
 
@@ -36,6 +38,8 @@ npm install termview
     The `Video` also has two sub functions. `Video.preload` and `Video.render`
 
     - #### Video.preload
+        ![Video](https://user-images.githubusercontent.com/38299977/165392951-5bbf48eb-c50c-4f91-9d5b-750bb2afd3d7.png)
+
         The `Video.preload` function will load the frame data and return an object like the one below. 
         ```js
         {
