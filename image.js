@@ -43,7 +43,7 @@ async function Image(image, width, height) {
             });
             pixels.forEach((item, i) => {
                 result = result + "\033[48;5;" + item + "m \033[0;00m"
-                if (resize && i > 0 && i % width === 0) {
+                if (resize && i % width === width - 1) {
                     result = result + '\n'
                 }
             });
