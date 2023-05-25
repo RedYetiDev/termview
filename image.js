@@ -28,7 +28,7 @@ function rgbToAnsi256(r, g, b) {
 async function Image(image, width, height) {
     width = width || process.stdout.columns;
     height = height || process.stdout.rows;
-    var resize = width != process.stdout.columns;
+    var resize = width !== process.stdout.columns;
     return new Promise((resolve, reject) => {
         var pixels = [];
         var result = "";
@@ -43,7 +43,7 @@ async function Image(image, width, height) {
             });
             pixels.forEach((item, i) => {
                 result = result + "\033[48;5;" + item + "m \033[0;00m"
-                if (resize && i > 0 && i % width == 0) {
+                if (resize && i > 0 && i % width === 0) {
                     result = result + '\n'
                 }
             });
