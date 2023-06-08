@@ -42,7 +42,7 @@ Video.preload = async function(video, width, height) {
             }
         });
     });
-    frames = await Promise.all(frames.split('89504e470d0a1a0a').filter(f => f.length > 0).map(f => Image(Buffer.from('89504e470d0a1a0a'+f, 'hex'))));
+    frames = await Promise.all(frames.split('89504e470d0a1a0a').filter(f => f.length > 0).map(f => Image(Buffer.from('89504e470d0a1a0a'+f, 'hex'), width, height)));
     return {fps, frames, width, height};
 }
 
